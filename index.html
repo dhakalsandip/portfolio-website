@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sandip Dhakal</title>
+  <meta name="description"
+    content="Portfolio of Sandip Dhakal - Software Developer specializing in ASP.NET Core, C#, Microsoft SQL Server, and IT Faculty teaching DBMS, OS, Java, Python, and C/C++. Based in Sunwal, Lumbini Province, Nepal.">
+
+  <script>
+    (function () {
+      try {
+        const urlParams = new URLSearchParams(window.location.search);
+        const queryTheme = urlParams.get('theme');
+        if (queryTheme === 'light' || queryTheme === 'dark') {
+          document.documentElement.setAttribute('data-theme', queryTheme);
+          return;
+        }
+        const saved = localStorage.getItem('sandip-portfolio-theme');
+        if (saved === 'dark' || saved === 'light') {
+          document.documentElement.setAttribute('data-theme', saved);
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Lora:ital,wght@0,500;0,600;1,400&display=swap"
+    rel="stylesheet">
+
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <header>
+    <div class="container header-content">
+      <div class="name-title">
+        <h2><b><i>Tr. </i></b>Sandip Dhakal</h2>
+        <p>Software Developer &amp; IT Faculty</p>
+      </div>
+
+      <div class="nav-actions">
+        <nav>
+          <a href="#overview">Overview</a>
+          <a href="#development">Engineering</a>
+          <a href="#teaching">Teaching</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="theme-toggle-wrapper">
+          <button id="theme-toggle" class="theme-toggle-btn" type="button" aria-label="Toggle Night and Light Mode"
+            title="Switch Theme">
+            <span class="toggle-icon" id="toggle-icon">
+              <svg id="svg-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
+              <svg id="svg-sun" style="display: none;" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+              </svg>
+            </span>
+            <span id="theme-text">Dark</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero reveal-on-scroll" id="overview">
+      <div>
+        <div class="live-status-pill">
+          <span class="pulse-dot"></span>
+          <span>Open for Software Projects &amp; IT Faculty</span>
+        </div>
+
+        <div>
+          <div class="two-track-badge border-beam-badge">
+            <span class="track-tag dev">● Software Developer</span>
+            <span style="color: var(--border);">|</span>
+            <span class="track-tag teach">● IT Faculty</span>
+          </div>
+        </div>
+
+        <h1>
+          Engineering with ASP.NET &amp; C#.<br>
+          Educating with Socratic Clarity.
+        </h1>
+
+        <p class="bio">
+          I build solid backend software powered by <strong>ASP.NET Core, C#, and Microsoft SQL Server</strong>, with
+          add-on web technologies in <strong>HTML, CSS, and JavaScript</strong>. In academia, I guide students through
+          <strong>DBMS, Operating Systems, Java, Python, and C/C++</strong> with hands-on conceptual rigor.
+        </p>
+
+        <div class="hero-btn-group">
+          <a href="#contact" class="btn btn-primary">
+            Get In Touch
+          </a>
+          <a href="#teaching" class="btn btn-secondary">
+            View Curriculum
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-photo-container" id="avatarContainer">
+        <canvas id="curveCanvas" class="avatar-canvas" width="220" height="220"></canvas>
+        <div class="hero-photo-curved" id="avatarPhoto" title="Sandip Dhakal">
+          <img src="images/avatar.jpg" alt="Sandip Dhakal - Software Developer &amp; IT Faculty" class="hero-photo">
+        </div>
+      </div>
+    </section>
+
+    <div class="grid-2">
+      <div class="section-box spotlight-card reveal-on-scroll" id="development">
+        <div class="spotlight-content">
+          <div class="section-icon">⚙️</div>
+          <h3>Software Development</h3>
+          <p class="box-sub">Production-grade enterprise web applications and database solutions.</p>
+
+          <div class="skill-category">
+            <div class="skill-cat-title">Prime Backend Technologies</div>
+            <div class="pill-group">
+              <span class="pill highlight">C# (.NET 8 / Core)</span>
+              <span class="pill highlight">ASP.NET Core Web API</span>
+              <span class="pill highlight">ASP.NET MVC</span>
+              <span class="pill highlight">SQL Server (T-SQL)</span>
+              <span class="pill highlight">Entity Framework Core</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <div class="skill-cat-title">Frontend &amp; Web Add-ons</div>
+            <div class="pill-group">
+              <span class="pill">HTML5</span>
+              <span class="pill">CSS3</span>
+              <span class="pill">JavaScript (ES6)</span>
+              <span class="pill">Bootstrap 5</span>
+              <span class="pill">REST APIs</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <div class="skill-cat-title">Database &amp; Architecture Competencies</div>
+            <div class="pill-group">
+              <span class="pill">Relational Schema Design</span>
+              <span class="pill">Stored Procedures &amp; Triggers</span>
+              <span class="pill">Index Optimization</span>
+              <span class="pill">Repository Pattern</span>
+              <span class="pill">Clean Architecture</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-box spotlight-card reveal-on-scroll" id="teaching">
+        <div class="spotlight-content">
+          <div class="section-icon">📖</div>
+          <h3>Teaching &amp; IT Faculty Subjects</h3>
+          <p class="box-sub">University courses, practical lab tutorials, and foundational computer science.</p>
+
+          <div class="skill-category">
+            <div class="skill-cat-title">Core IT Curricula Instructed</div>
+            <div class="pill-group">
+              <span class="pill highlight-warm">DBMS &amp; SQL</span>
+              <span class="pill highlight-warm">Operating Systems</span>
+              <span class="pill highlight-warm">Java OOP</span>
+              <span class="pill highlight-warm">Python Programming</span>
+              <span class="pill highlight-warm">C / C++ Programming</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <div class="skill-cat-title">Interactive Syllabus Deep-Dive</div>
+            <div class="curriculum-accordion" id="curriculumAccordion">
+              <div class="accordion-item active">
+                <button class="accordion-header" type="button" aria-expanded="true">
+                  <div class="accordion-title-group">
+                    <span class="accordion-badge">DBMS</span>
+                    <span>Database Systems &amp; SQL</span>
+                  </div>
+                  <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </button>
+                <div class="accordion-body">
+                  <ul class="accordion-meta-list">
+                    <li><strong>Core Theory:</strong> ER-Diagrams, Relational Algebra, Functional Dependencies &amp; Normalization (1NF–BCNF).</li>
+                    <li><strong>Practical Labs:</strong> Stored Procedures, Indexes, ACID Transactions, and Complex Query Optimization.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <button class="accordion-header" type="button" aria-expanded="false">
+                  <div class="accordion-title-group">
+                    <span class="accordion-badge">OS</span>
+                    <span>Operating Systems &amp; Concurrency</span>
+                  </div>
+                  <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </button>
+                <div class="accordion-body">
+                  <ul class="accordion-meta-list">
+                    <li><strong>Core Theory:</strong> Process States, CPU Scheduling (Round Robin, SJF), Banker's Deadlock Avoidance.</li>
+                    <li><strong>Practical Labs:</strong> Virtual Memory Paging, Mutex &amp; Semaphore Synchronization, Linux POSIX Shell.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <button class="accordion-header" type="button" aria-expanded="false">
+                  <div class="accordion-title-group">
+                    <span class="accordion-badge">OOP</span>
+                    <span>Java &amp; C++ Engineering</span>
+                  </div>
+                  <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </button>
+                <div class="accordion-body">
+                  <ul class="accordion-meta-list">
+                    <li><strong>Core Theory:</strong> Encapsulation, Inheritance, Polymorphism, Interfaces, and Exception Safety.</li>
+                    <li><strong>Practical Labs:</strong> Multi-threading, Collections Framework, C++ STL, and Clean Architecture Design Patterns.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <button class="accordion-header" type="button" aria-expanded="false">
+                  <div class="accordion-title-group">
+                    <span class="accordion-badge">Core</span>
+                    <span>Python &amp; C Programming</span>
+                  </div>
+                  <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </button>
+                <div class="accordion-body">
+                  <ul class="accordion-meta-list">
+                    <li><strong>Core Theory:</strong> Pointer Arithmetic, Memory Allocation (malloc/free), Data Structures &amp; Complexity.</li>
+                    <li><strong>Practical Labs:</strong> Linked Lists, Trees, Algorithmic Problem Solving, and Scripting Automation.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="contact-card spotlight-card reveal-on-scroll" id="contact">
+      <div class="spotlight-content">
+        <div class="contact-header">
+          <h3>Get In Touch</h3>
+          <p>Available for software development projects, database design, enterprise consulting, and IT faculty lectures.
+          </p>
+        </div>
+
+        <div class="contact-social-row">
+          <a href="mailto:iamdhakalsandip@gmail.com" class="social-icon-btn" aria-label="Email" title="Send Email (iamdhakalsandip@gmail.com)">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+          </a>
+
+          <a href="https://www.linkedin.com/in/dhakalsandip" target="_blank" rel="noopener noreferrer"
+            class="social-icon-btn" aria-label="LinkedIn" title="LinkedIn Profile (dhakalsandip)">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+          </a>
+
+          <a href="https://github.com/dhakalsandip" target="_blank" rel="noopener noreferrer" class="social-icon-btn"
+            aria-label="GitHub" title="GitHub Profile (dhakalsandip)">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+              </path>
+            </svg>
+          </a>
+        </div>
+
+        <div style="margin-top: 1.5rem;">
+          <a href="mailto:iamdhakalsandip@gmail.com" class="btn btn-primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <line x1="22" y1="2" x2="11" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+            Direct Inquiries &amp; Projects
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-copyright">
+        @<span id="nepal-year">2026</span> SANDIP DHAKAL
+      </div>
+      <div class="footer-caption">
+        IT + Teacher: "Empowering future minds in technology — Code with logic, teach with heart, and build with
+        purpose."
+      </div>
+    </div>
+  </footer>
+
+  <button id="back-to-top" class="back-to-top" type="button" aria-label="Scroll to top" title="Scroll to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+      stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
