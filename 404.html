@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found | Sandip Dhakal</title>
+  <meta name="description" content="The page you are looking for does not exist. Return to Sandip Dhakal's portfolio.">
+  <meta name="robots" content="noindex, nofollow">
+
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('sandip-portfolio-theme');
+        if (saved === 'dark' || saved === 'light') {
+          document.documentElement.setAttribute('data-theme', saved);
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Lora:ital,wght@0,500;0,600;1,400&display=swap"
+    rel="stylesheet">
+
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="container header-content">
+      <div class="name-title">
+        <h2><a href="/">Sandip Dhakal</a></h2>
+        <p>Software Developer &amp; IT Faculty</p>
+      </div>
+
+      <div class="nav-actions">
+        <nav id="main-nav" aria-label="Main navigation">
+          <a href="/">Home</a>
+          <a href="about.html">About</a>
+          <a href="engineering.html">Engineering</a>
+          <a href="teaching.html">Teaching</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="theme-toggle-wrapper">
+          <button id="theme-toggle" class="theme-toggle-btn" type="button" aria-label="Toggle Night and Light Mode"
+            title="Switch Theme">
+            <span class="toggle-icon" id="toggle-icon">
+              <svg id="svg-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
+              <svg id="svg-sun" style="display: none;" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+              </svg>
+            </span>
+            <span id="theme-text">Dark</span>
+          </button>
+        </div>
+
+        <button id="mobile-menu-btn" class="mobile-menu-btn" type="button" aria-label="Open navigation menu"
+          aria-expanded="false" aria-controls="main-nav">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="error-page">
+      <div class="error-code">404</div>
+      <h1>Page Not Found</h1>
+      <p>The page you are looking for does not exist or has been moved. Try one of the links below to find what you
+        need.</p>
+      <div class="error-links">
+        <a href="/" class="btn btn-primary">Back to Home</a>
+        <a href="contact.html" class="btn btn-secondary">Contact Me</a>
+      </div>
+
+      <div class="internal-links" style="width: 100%; max-width: 600px;">
+        <h3>Site Pages</h3>
+        <div class="link-cards">
+          <a href="about.html" class="link-card">
+            <span class="link-icon">&#128100;</span>
+            <span>About</span>
+          </a>
+          <a href="engineering.html" class="link-card">
+            <span class="link-icon">&#9881;&#65039;</span>
+            <span>Engineering</span>
+          </a>
+          <a href="teaching.html" class="link-card">
+            <span class="link-icon">&#128214;</span>
+            <span>Teaching</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-copyright">
+        &copy;<span id="nepal-year">2026</span> Sandip Dhakal
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="/">Home</a>
+        <a href="about.html">About</a>
+        <a href="engineering.html">Engineering</a>
+        <a href="teaching.html">Teaching</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

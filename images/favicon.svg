@@ -1,15 +1,64 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="100%" height="100%">
   <defs>
-    <linearGradient id="favGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1e293b"/>
-      <stop offset="100%" stop-color="#0f172a"/>
+    <!-- Vibrant Modern Gradients -->
+    <linearGradient id="sdGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F2FE" />
+      <stop offset="100%" stop-color="#4FACFE" />
     </linearGradient>
-    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#38bdf8"/>
-      <stop offset="100%" stop-color="#f59e0b"/>
+
+    <linearGradient id="sdGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6A11CB" />
+      <stop offset="100%" stop-color="#2575FC" />
     </linearGradient>
+
+    <!-- Soft Depth Shadow -->
+    <filter id="softShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.25" />
+    </filter>
   </defs>
-  <rect width="64" height="64" rx="14" fill="url(#favGrad)"/>
-  <rect x="2" y="2" width="60" height="60" rx="12" fill="none" stroke="url(#accentGrad)" stroke-width="2.5" opacity="0.8"/>
-  <text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-weight="800" font-size="28" fill="#f8fafc" letter-spacing="-1">SD</text>
+
+  <!-- Group with Shadow Filter -->
+  <g filter="url(#softShadow)">
+    
+    <!-- ================= LETTER S ================= -->
+    <path
+      d="M 235 175
+         H 170
+         A 55 55 0 0 0 170 285
+         H 215
+         A 55 55 0 0 1 215 395
+         H 145"
+      fill="none"
+      stroke="url(#sdGradient1)"
+      stroke-width="42"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+
+    <!-- ================= LETTER D ================= -->
+    <!-- Straight Back Stem -->
+    <path
+      d="M 285 395 V 175"
+      fill="none"
+      stroke="url(#sdGradient2)"
+      stroke-width="42"
+      stroke-linecap="round"
+    />
+
+    <!-- D Outer Curve Arc -->
+    <path
+      d="M 285 175
+         H 335
+         A 110 110 0 0 1 335 395
+         H 285"
+      fill="none"
+      stroke="url(#sdGradient2)"
+      stroke-width="42"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+
+    <!-- Decorative Central Intersect Node -->
+    <circle cx="285" cy="285" r="9" fill="#00F2FE" />
+  </g>
 </svg>

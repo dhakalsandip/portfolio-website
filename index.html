@@ -4,20 +4,67 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sandip Dhakal</title>
+  <title>Sandip Dhakal | Software Developer &amp; IT Faculty in Nepal</title>
   <meta name="description"
-    content="Portfolio of Sandip Dhakal - Software Developer specializing in ASP.NET Core, C#, Microsoft SQL Server, and IT Faculty teaching DBMS, OS, Java, Python, and C/C++. Based in Sunwal, Lumbini Province, Nepal.">
+    content="Sandip Dhakal builds production-grade backend systems with ASP.NET Core, C#, and SQL Server. He also teaches DBMS, Operating Systems, Java, Python, and C/C++ at university level in Sunwal, Nepal.">
+  <link rel="canonical" href="https://dhakalsandip.com.np/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Sandip Dhakal | Software Developer &amp; IT Faculty">
+  <meta property="og:description"
+    content="Backend engineering with ASP.NET Core and C#. University-level IT instruction in DBMS, OS, Java, Python, and C/C++. Based in Sunwal, Nepal.">
+  <meta property="og:url" content="https://dhakalsandip.com.np/">
+  <meta property="og:image" content="https://dhakalsandip.com.np/images/og-share.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="Sandip Dhakal">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sandip Dhakal | Software Developer &amp; IT Faculty">
+  <meta name="twitter:description"
+    content="Backend engineering with ASP.NET Core and C#. University-level IT instruction in DBMS, OS, Java, Python, and C/C++.">
+  <meta name="twitter:image" content="https://dhakalsandip.com.np/images/og-share.jpg">
+
+  <!-- Schema.org Person + Business -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Sandip Dhakal",
+    "url": "https://dhakalsandip.com.np",
+    "image": "https://dhakalsandip.com.np/images/avatar.jpg",
+    "jobTitle": ["Software Developer", "IT Faculty"],
+    "description": "Software Developer specializing in ASP.NET Core, C#, and Microsoft SQL Server. IT Faculty teaching DBMS, Operating Systems, Java, Python, and C/C++.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Sunwal",
+      "addressRegion": "Lumbini Province",
+      "addressCountry": "NP"
+    },
+    "email": "iamdhakalsandip@gmail.com",
+    "sameAs": [
+      "https://www.linkedin.com/in/dhakalsandip",
+      "https://github.com/dhakalsandip"
+    ],
+    "knowsAbout": [
+      "ASP.NET Core", "C#", "Microsoft SQL Server", "Entity Framework Core",
+      "HTML", "CSS", "JavaScript", "DBMS", "Operating Systems", "Java", "Python", "C/C++"
+    ]
+  }
+  </script>
 
   <script>
     (function () {
       try {
-        const urlParams = new URLSearchParams(window.location.search);
-        const queryTheme = urlParams.get('theme');
+        var urlParams = new URLSearchParams(window.location.search);
+        var queryTheme = urlParams.get('theme');
         if (queryTheme === 'light' || queryTheme === 'dark') {
           document.documentElement.setAttribute('data-theme', queryTheme);
           return;
         }
-        const saved = localStorage.getItem('sandip-portfolio-theme');
+        var saved = localStorage.getItem('sandip-portfolio-theme');
         if (saved === 'dark' || saved === 'light') {
           document.documentElement.setAttribute('data-theme', saved);
         } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
@@ -48,16 +95,17 @@
   <header>
     <div class="container header-content">
       <div class="name-title">
-        <h2><b><i>Tr. </i></b>Sandip Dhakal</h2>
+        <h2><a href="/">Sandip Dhakal</a></h2>
         <p>Software Developer &amp; IT Faculty</p>
       </div>
 
       <div class="nav-actions">
-        <nav>
-          <a href="#overview">Overview</a>
-          <a href="#development">Engineering</a>
-          <a href="#teaching">Teaching</a>
-          <a href="#contact">Contact</a>
+        <nav id="main-nav" aria-label="Main navigation">
+          <a href="/" class="active">Home</a>
+          <a href="about.html">About</a>
+          <a href="engineering.html">Engineering</a>
+          <a href="teaching.html">Teaching</a>
+          <a href="contact.html">Contact</a>
         </nav>
 
         <div class="theme-toggle-wrapper">
@@ -84,6 +132,13 @@
             <span id="theme-text">Dark</span>
           </button>
         </div>
+
+        <button id="mobile-menu-btn" class="mobile-menu-btn" type="button" aria-label="Open navigation menu"
+          aria-expanded="false" aria-controls="main-nav">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
       </div>
     </div>
   </header>
@@ -98,9 +153,9 @@
 
         <div>
           <div class="two-track-badge border-beam-badge">
-            <span class="track-tag dev">● Software Developer</span>
+            <span class="track-tag dev">Software Developer</span>
             <span style="color: var(--border);">|</span>
-            <span class="track-tag teach">● IT Faculty</span>
+            <span class="track-tag teach">IT Faculty</span>
           </div>
         </div>
 
@@ -116,10 +171,10 @@
         </p>
 
         <div class="hero-btn-group">
-          <a href="#contact" class="btn btn-primary">
+          <a href="contact.html" class="btn btn-primary">
             Get In Touch
           </a>
-          <a href="#teaching" class="btn btn-secondary">
+          <a href="teaching.html" class="btn btn-secondary">
             View Curriculum
           </a>
         </div>
@@ -128,15 +183,15 @@
       <div class="hero-photo-container" id="avatarContainer">
         <canvas id="curveCanvas" class="avatar-canvas" width="220" height="220"></canvas>
         <div class="hero-photo-curved" id="avatarPhoto" title="Sandip Dhakal">
-          <img src="images/avatar.png" alt="Sandip Dhakal - Software Developer &amp; IT Faculty" class="hero-photo">
+          <img src="images/avatar.jpg" alt="Sandip Dhakal, Software Developer and IT Faculty based in Sunwal, Nepal" class="hero-photo" width="175" height="175">
         </div>
       </div>
     </section>
 
-    <div class="grid-2">
-      <div class="section-box spotlight-card reveal-on-scroll" id="development">
+    <div class="grid-2 reveal-on-scroll">
+      <a href="engineering.html" class="section-box spotlight-card" style="text-decoration: none; color: inherit;">
         <div class="spotlight-content">
-          <div class="section-icon">⚙️</div>
+          <div class="section-icon">&#9881;&#65039;</div>
           <h3>Software Development</h3>
           <p class="box-sub">Production-grade enterprise web applications and database solutions.</p>
 
@@ -150,35 +205,13 @@
               <span class="pill highlight">Entity Framework Core</span>
             </div>
           </div>
-
-          <div class="skill-category">
-            <div class="skill-cat-title">Frontend &amp; Web Add-ons</div>
-            <div class="pill-group">
-              <span class="pill">HTML5</span>
-              <span class="pill">CSS3</span>
-              <span class="pill">JavaScript (ES6)</span>
-              <span class="pill">Bootstrap 5</span>
-              <span class="pill">REST APIs</span>
-            </div>
-          </div>
-
-          <div class="skill-category">
-            <div class="skill-cat-title">Database &amp; Architecture Competencies</div>
-            <div class="pill-group">
-              <span class="pill">Relational Schema Design</span>
-              <span class="pill">Stored Procedures &amp; Triggers</span>
-              <span class="pill">Index Optimization</span>
-              <span class="pill">Repository Pattern</span>
-              <span class="pill">Clean Architecture</span>
-            </div>
-          </div>
         </div>
-      </div>
+      </a>
 
-      <div class="section-box spotlight-card reveal-on-scroll" id="teaching">
+      <a href="teaching.html" class="section-box spotlight-card" style="text-decoration: none; color: inherit;">
         <div class="spotlight-content">
-          <div class="section-icon">📖</div>
-          <h3>Teaching &amp; IT Faculty Subjects</h3>
+          <div class="section-icon">&#128214;</div>
+          <h3>Teaching &amp; IT Faculty</h3>
           <p class="box-sub">University courses, practical lab tutorials, and foundational computer science.</p>
 
           <div class="skill-category">
@@ -191,97 +224,21 @@
               <span class="pill highlight-warm">C / C++ Programming</span>
             </div>
           </div>
-
-          <div class="skill-category">
-            <div class="skill-cat-title">Interactive Syllabus Deep-Dive</div>
-            <div class="curriculum-accordion" id="curriculumAccordion">
-              <div class="accordion-item active">
-                <button class="accordion-header" type="button" aria-expanded="true">
-                  <div class="accordion-title-group">
-                    <span class="accordion-badge">DBMS</span>
-                    <span>Database Systems &amp; SQL</span>
-                  </div>
-                  <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="6 9 12 15 18 9"></polyline>
-                  </svg>
-                </button>
-                <div class="accordion-body">
-                  <ul class="accordion-meta-list">
-                    <li><strong>Core Theory:</strong> ER-Diagrams, Relational Algebra, Functional Dependencies &amp; Normalization (1NF–BCNF).</li>
-                    <li><strong>Practical Labs:</strong> Stored Procedures, Indexes, ACID Transactions, and Complex Query Optimization.</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="accordion-item">
-                <button class="accordion-header" type="button" aria-expanded="false">
-                  <div class="accordion-title-group">
-                    <span class="accordion-badge">OS</span>
-                    <span>Operating Systems &amp; Concurrency</span>
-                  </div>
-                  <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="6 9 12 15 18 9"></polyline>
-                  </svg>
-                </button>
-                <div class="accordion-body">
-                  <ul class="accordion-meta-list">
-                    <li><strong>Core Theory:</strong> Process States, CPU Scheduling (Round Robin, SJF), Banker's Deadlock Avoidance.</li>
-                    <li><strong>Practical Labs:</strong> Virtual Memory Paging, Mutex &amp; Semaphore Synchronization, Linux POSIX Shell.</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="accordion-item">
-                <button class="accordion-header" type="button" aria-expanded="false">
-                  <div class="accordion-title-group">
-                    <span class="accordion-badge">OOP</span>
-                    <span>Java &amp; C++ Engineering</span>
-                  </div>
-                  <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="6 9 12 15 18 9"></polyline>
-                  </svg>
-                </button>
-                <div class="accordion-body">
-                  <ul class="accordion-meta-list">
-                    <li><strong>Core Theory:</strong> Encapsulation, Inheritance, Polymorphism, Interfaces, and Exception Safety.</li>
-                    <li><strong>Practical Labs:</strong> Multi-threading, Collections Framework, C++ STL, and Clean Architecture Design Patterns.</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="accordion-item">
-                <button class="accordion-header" type="button" aria-expanded="false">
-                  <div class="accordion-title-group">
-                    <span class="accordion-badge">Core</span>
-                    <span>Python &amp; C Programming</span>
-                  </div>
-                  <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="6 9 12 15 18 9"></polyline>
-                  </svg>
-                </button>
-                <div class="accordion-body">
-                  <ul class="accordion-meta-list">
-                    <li><strong>Core Theory:</strong> Pointer Arithmetic, Memory Allocation (malloc/free), Data Structures &amp; Complexity.</li>
-                    <li><strong>Practical Labs:</strong> Linked Lists, Trees, Algorithmic Problem Solving, and Scripting Automation.</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
+      </a>
     </div>
 
-    <section class="contact-card spotlight-card reveal-on-scroll" id="contact">
+    <section class="contact-card spotlight-card reveal-on-scroll" id="contact-preview">
       <div class="spotlight-content">
         <div class="contact-header">
           <h3>Get In Touch</h3>
-          <p>Available for software development projects, database design, enterprise consulting, and IT faculty lectures.
-          </p>
+          <p>Available for software development projects, database design, enterprise consulting, and IT faculty
+            lectures.</p>
         </div>
 
         <div class="contact-social-row">
-          <a href="mailto:iamdhakalsandip@gmail.com" class="social-icon-btn" aria-label="Email" title="Send Email (iamdhakalsandip@gmail.com)">
+          <a href="mailto:iamdhakalsandip@gmail.com" class="social-icon-btn" aria-label="Send email to Sandip Dhakal"
+            title="Send Email (iamdhakalsandip@gmail.com)">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
               stroke-linecap="round" stroke-linejoin="round">
               <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
@@ -290,7 +247,8 @@
           </a>
 
           <a href="https://www.linkedin.com/in/dhakalsandip" target="_blank" rel="noopener noreferrer"
-            class="social-icon-btn" aria-label="LinkedIn" title="LinkedIn Profile (dhakalsandip)">
+            class="social-icon-btn" aria-label="Visit Sandip Dhakal on LinkedIn"
+            title="LinkedIn Profile (dhakalsandip)">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
               stroke-linecap="round" stroke-linejoin="round">
               <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
@@ -300,7 +258,7 @@
           </a>
 
           <a href="https://github.com/dhakalsandip" target="_blank" rel="noopener noreferrer" class="social-icon-btn"
-            aria-label="GitHub" title="GitHub Profile (dhakalsandip)">
+            aria-label="Visit Sandip Dhakal on GitHub" title="GitHub Profile (dhakalsandip)">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
               stroke-linecap="round" stroke-linejoin="round">
               <path
@@ -311,7 +269,7 @@
         </div>
 
         <div style="margin-top: 1.5rem;">
-          <a href="mailto:iamdhakalsandip@gmail.com" class="btn btn-primary">
+          <a href="contact.html" class="btn btn-primary">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
               stroke-linecap="round" stroke-linejoin="round">
               <line x1="22" y1="2" x2="11" y2="13"></line>
@@ -327,12 +285,18 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-copyright">
-        @<span id="nepal-year">2026</span> SANDIP DHAKAL
+        &copy;<span id="nepal-year">2026</span> Sandip Dhakal
       </div>
       <div class="footer-caption">
-        IT + Teacher: "Empowering future minds in technology — Code with logic, teach with heart, and build with
-        purpose."
+        Code with logic, teach with heart, build with purpose.
       </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="/">Home</a>
+        <a href="about.html">About</a>
+        <a href="engineering.html">Engineering</a>
+        <a href="teaching.html">Teaching</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </div>
   </footer>
 

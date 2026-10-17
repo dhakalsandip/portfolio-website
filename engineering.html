@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Software Engineering Skills | Sandip Dhakal</title>
+  <meta name="description"
+    content="Explore Sandip Dhakal's software engineering stack: ASP.NET Core, C#, SQL Server, Entity Framework Core, REST APIs, HTML, CSS, JavaScript, and clean architecture patterns.">
+  <link rel="canonical" href="https://dhakalsandip.com.np/engineering.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Software Engineering Skills | Sandip Dhakal">
+  <meta property="og:description"
+    content="Backend engineering with ASP.NET Core, C#, SQL Server, Entity Framework Core, and clean architecture.">
+  <meta property="og:url" content="https://dhakalsandip.com.np/engineering.html">
+  <meta property="og:image" content="https://dhakalsandip.com.np/images/og-share.jpg">
+  <meta property="og:site_name" content="Sandip Dhakal">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Software Engineering Skills | Sandip Dhakal">
+  <meta name="twitter:description"
+    content="Backend engineering with ASP.NET Core, C#, SQL Server, Entity Framework Core, and clean architecture.">
+  <meta name="twitter:image" content="https://dhakalsandip.com.np/images/og-share.jpg">
+
+  <!-- Breadcrumb Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://dhakalsandip.com.np/" },
+      { "@type": "ListItem", "position": 2, "name": "Engineering", "item": "https://dhakalsandip.com.np/engineering.html" }
+    ]
+  }
+  </script>
+
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('sandip-portfolio-theme');
+        if (saved === 'dark' || saved === 'light') {
+          document.documentElement.setAttribute('data-theme', saved);
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Lora:ital,wght@0,500;0,600;1,400&display=swap"
+    rel="stylesheet">
+
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <header>
+    <div class="container header-content">
+      <div class="name-title">
+        <h2><a href="/">Sandip Dhakal</a></h2>
+        <p>Software Developer &amp; IT Faculty</p>
+      </div>
+
+      <div class="nav-actions">
+        <nav id="main-nav" aria-label="Main navigation">
+          <a href="/">Home</a>
+          <a href="about.html">About</a>
+          <a href="engineering.html" class="active">Engineering</a>
+          <a href="teaching.html">Teaching</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="theme-toggle-wrapper">
+          <button id="theme-toggle" class="theme-toggle-btn" type="button" aria-label="Toggle Night and Light Mode"
+            title="Switch Theme">
+            <span class="toggle-icon" id="toggle-icon">
+              <svg id="svg-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+              </svg>
+              <svg id="svg-sun" style="display: none;" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+              </svg>
+            </span>
+            <span id="theme-text">Dark</span>
+          </button>
+        </div>
+
+        <button id="mobile-menu-btn" class="mobile-menu-btn" type="button" aria-label="Open navigation menu"
+          aria-expanded="false" aria-controls="main-nav">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><span class="breadcrumb-sep">/</span></li>
+        <li><span class="breadcrumb-current">Engineering</span></li>
+      </ol>
+    </nav>
+
+    <div class="page-header">
+      <h1>Software Engineering</h1>
+      <p>Production-grade enterprise web applications, database solutions, and backend architecture built with the
+        Microsoft stack.</p>
+    </div>
+
+    <div class="section-box spotlight-card reveal-on-scroll">
+      <div class="spotlight-content">
+        <div class="section-icon">&#9881;&#65039;</div>
+        <h3>Prime Backend Technologies</h3>
+        <p class="box-sub">The core tools I use daily to build reliable, maintainable server-side applications.</p>
+
+        <div class="skill-category">
+          <div class="pill-group">
+            <span class="pill highlight">C# (.NET 8 / Core)</span>
+            <span class="pill highlight">ASP.NET Core Web API</span>
+            <span class="pill highlight">ASP.NET MVC</span>
+            <span class="pill highlight">SQL Server (T-SQL)</span>
+            <span class="pill highlight">Entity Framework Core</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-2" style="margin-top: 2rem;">
+      <div class="section-box spotlight-card reveal-on-scroll">
+        <div class="spotlight-content">
+          <h3>Frontend &amp; Web Add-ons</h3>
+          <p class="box-sub">Complementary technologies for building complete web solutions.</p>
+          <div class="pill-group">
+            <span class="pill">HTML5</span>
+            <span class="pill">CSS3</span>
+            <span class="pill">JavaScript (ES6)</span>
+            <span class="pill">Bootstrap 5</span>
+            <span class="pill">REST APIs</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-box spotlight-card reveal-on-scroll">
+        <div class="spotlight-content">
+          <h3>Database &amp; Architecture</h3>
+          <p class="box-sub">Patterns and practices for scalable, well-structured systems.</p>
+          <div class="pill-group">
+            <span class="pill">Relational Schema Design</span>
+            <span class="pill">Stored Procedures &amp; Triggers</span>
+            <span class="pill">Index Optimization</span>
+            <span class="pill">Repository Pattern</span>
+            <span class="pill">Clean Architecture</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="internal-links reveal-on-scroll">
+      <h3>Continue Exploring</h3>
+      <div class="link-cards">
+        <a href="about.html" class="link-card">
+          <span class="link-icon">&#128100;</span>
+          <span>About Me</span>
+        </a>
+        <a href="teaching.html" class="link-card">
+          <span class="link-icon">&#128214;</span>
+          <span>Teaching Curriculum</span>
+        </a>
+        <a href="contact.html" class="link-card">
+          <span class="link-icon">&#9993;&#65039;</span>
+          <span>Get In Touch</span>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-copyright">
+        &copy;<span id="nepal-year">2026</span> Sandip Dhakal
+      </div>
+      <div class="footer-caption">
+        Code with logic, teach with heart, build with purpose.
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="/">Home</a>
+        <a href="about.html">About</a>
+        <a href="engineering.html">Engineering</a>
+        <a href="teaching.html">Teaching</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <button id="back-to-top" class="back-to-top" type="button" aria-label="Scroll to top" title="Scroll to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+      stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
