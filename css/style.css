@@ -79,7 +79,9 @@ html {
 html, body {
   background-color: var(--bg);
   color: var(--text-dark);
-  overflow-x: hidden;
+  /* Use clip instead of hidden — clip prevents horizontal scroll without
+     creating a scroll container, so position:sticky on <header> still works */
+  overflow-x: clip;
   width: 100%;
   -webkit-tap-highlight-color: rgba(16, 185, 129, 0.15);
 }
@@ -91,7 +93,6 @@ body {
   display: flex;
   flex-direction: column;
   transition: background-color 0.25s ease, color 0.25s ease;
-  overflow-x: hidden;
 }
 
 .container {
@@ -125,6 +126,13 @@ header {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   transition: border-color 0.25s ease, background-color 0.25s ease;
+}
+
+/* On mobile: header scrolls with page (not fixed) */
+@media (max-width: 768px) {
+  header {
+    position: static;
+  }
 }
 
 .header-content {
@@ -1179,6 +1187,7 @@ main {
 @media (max-width: 768px) {
   header {
     padding: 0.85rem 0;
+    position: static;
   }
 
   .header-content {
